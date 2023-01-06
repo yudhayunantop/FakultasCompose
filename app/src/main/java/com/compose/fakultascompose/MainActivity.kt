@@ -1,5 +1,7 @@
 package com.compose.fakultascompose
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -43,13 +45,19 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainActivityScreen() {
-    val context = LocalContext.current
+    val context = LocalContext.current as Activity
     val listfakultas = DataFakultas.listFakultas.slice(0..9)
     Scaffold(topBar = { TopBar(title = "List Fakultas")}) {
         LazyColumn(modifier = Modifier.padding(it)){
             items(listfakultas){
                 CardFakultas(fakultas=it){
-                    Toast.makeText(context, it.name, Toast.LENGTH_SHORT).show()
+                    val intent = Intent(context, DetailActivity::class.java)
+                    intent.putExtra("name", it.name)
+                    intent.putExtra("detail", it.detail)
+                    intent.putExtra("photo", it.photo)
+                    intent.putExtra("email", it.email)
+
+                    context.startActivity(intent)
                 }
             }
         }
@@ -63,9 +71,10 @@ fun TopBar(title: String) {
         Row(modifier =  Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically ) {
             Text(text = title, modifier = Modifier.padding(start = 16.dp), fontSize = 18.sp)
             IconButton(onClick = {
-                Toast.makeText(context, "About", Toast.LENGTH_SHORT).show()
+                val intent = Intent(context, AboutActivity::class.java)
+                context.startActivity(intent)
             }) {
-                Icon(imageVector = Icons.Default.AccountCircle, contentDescription = null)
+                Icon(imageVector = Icons.Default.AccountCircle, contentDescription = "about_page")
             }
         }
     })

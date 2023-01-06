@@ -14,8 +14,7 @@ object DataFakultas {
             "FAKULTAS ILMU SOSIAL DAN ILMU POLITIK",
             "FAKULTAS TEKNIK",
             "FAKULTAS SAINS",
-            "FAKULTAS KEDOKTERAN",
-            "PROFIL SAYA"
+            "FAKULTAS KEDOKTERAN"
     )
 
     private val fakultasEmail = arrayOf(
@@ -28,8 +27,7 @@ object DataFakultas {
             "fisip@upnjatim.ac.id",
             "ft@upnjatim.ac.id",
             "fs@upnjatim.ac.id",
-            "fk@upnjatim.ac.id",
-            "yudha.yunanto.2010@gmail.com"
+            "fk@upnjatim.ac.id"
     )
 
     private val fakultasDetails = arrayOf(
@@ -53,11 +51,6 @@ object DataFakultas {
                     "\n 1. Sains Fisika \n 2. Sains Biologi \n 3. Sains Kimia",
             "Fakultas Kedokteran merupakan salah satu dari 10 Fakultas di UPN Veteran Jawa Timur yang terdiri dari program studi:\n" +
                     "\n 1. Kedokteran Hewan \n 2. Kesehatan Masyarakat \n 3. Kedokteran Gigi",
-            "Nama           : Yudha Yunanto Putra\n" +
-                    "TTL            : Surabaya, 30 Mei 2000\n" +
-                    "Alamat         : Jl. Wonorejo Rungkut 1/5\n" +
-                    "No. HP         : 082135888551\n" +
-                    "\n Riwayat Pendidikan : \n 1. SDN Wonorejo 274 \n 2. SMPN 12 Surabaya \n 3. SMAM 2 Surabaya"
     )
 
     private val fakultasColor = arrayOf(
@@ -70,8 +63,7 @@ object DataFakultas {
         Yellow,
         Blue,
         Teal200,
-        Purple700,
-        White
+        Purple700
     )
 
     private val fakultasImages = intArrayOf(
@@ -84,8 +76,7 @@ object DataFakultas {
         R.drawable.fisip,
         R.drawable.ft,
         R.drawable.fs,
-        R.drawable.fk,
-        R.drawable.profil
+        R.drawable.fk
     )
 
         val listFakultas: ArrayList<fakultas>
