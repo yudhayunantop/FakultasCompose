@@ -47,7 +47,7 @@ class MainActivity : ComponentActivity() {
 fun MainActivityScreen() {
     val context = LocalContext.current as Activity
     val listfakultas = DataFakultas.listFakultas.slice(0..9)
-    Scaffold(topBar = { TopBar(title = "List Fakultas")}) {
+    Scaffold(topBar = { TopBar(title = "List Fakultas UPN JATIM")}) {
         LazyColumn(modifier = Modifier.padding(it)){
             items(listfakultas){
                 CardFakultas(fakultas=it){
